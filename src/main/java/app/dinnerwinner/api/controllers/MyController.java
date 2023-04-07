@@ -3,9 +3,7 @@ package app.dinnerwinner.api.controllers;
 import app.dinnerwinner.api.dao.UserRepository;
 import app.dinnerwinner.api.entitles.Recipe;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,4 +15,12 @@ public class MyController {
     public List<Recipe> getMyRecipe(){
         return null;
     };
+
+
+
+
+
+
+
+
 }

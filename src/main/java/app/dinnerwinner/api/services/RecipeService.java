@@ -12,15 +12,19 @@ import java.util.List;
 @Service
 public class RecipeService {
 
-    @PersistenceContext
-    private EntityManager entityManager;
-
     @Autowired
     private RecipeRepository recipeRepository;
+
+    public RecipeService(RecipeRepository recipeRepository) {
+        this.recipeRepository = recipeRepository;
+    }
 
     public List<Recipe> getAllRecipes() {
         return recipeRepository.findAll();
     }
-
+    
+    public Recipe createRecipe(Recipe recipe){
+        return recipeRepository.save(recipe);
+    }
 
 }

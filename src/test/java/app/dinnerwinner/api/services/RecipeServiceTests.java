@@ -1,9 +1,10 @@
 package app.dinnerwinner.api.services;
 
-import app.dinnerwinner.api.dao.RecipeRepository;
-import app.dinnerwinner.api.entitles.Ingredient;
-import app.dinnerwinner.api.entitles.Recipe;
+import app.dinnerwinner.api.recipe.dao.RecipeRepository;
+import app.dinnerwinner.api.recipe.entitles.Ingredient;
+import app.dinnerwinner.api.recipe.entitles.Recipe;
 
+import app.dinnerwinner.api.recipe.services.RecipeService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

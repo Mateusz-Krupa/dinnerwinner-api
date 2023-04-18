@@ -1,4 +1,4 @@
-package app.dinnerwinner.api.entitles;
+package app.dinnerwinner.api.recipe.entitles;
 
 import jakarta.persistence.*;
 

@@ -1,9 +1,7 @@
-package app.dinnerwinner.api.services;
+package app.dinnerwinner.api.recipe.services;
 
-import app.dinnerwinner.api.dao.RecipeRepository;
-import app.dinnerwinner.api.entitles.Recipe;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
+import app.dinnerwinner.api.recipe.dao.RecipeRepository;
+import app.dinnerwinner.api.recipe.entitles.Recipe;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

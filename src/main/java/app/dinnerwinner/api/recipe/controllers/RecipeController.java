@@ -1,14 +1,14 @@
-package app.dinnerwinner.api.controllers;
+package app.dinnerwinner.api.recipe.controllers;
 
-import app.dinnerwinner.api.entitles.Recipe;
-import app.dinnerwinner.api.services.RecipeService;
+import app.dinnerwinner.api.recipe.entitles.Recipe;
+import app.dinnerwinner.api.recipe.services.RecipeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/recipe")
+@RequestMapping("/api/v1/recipe")
 public class RecipeController {
 
     @Autowired

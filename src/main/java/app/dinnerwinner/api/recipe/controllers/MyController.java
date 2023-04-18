@@ -1,8 +1,6 @@
-package app.dinnerwinner.api.controllers;
+package app.dinnerwinner.api.recipe.controllers;
 
-import app.dinnerwinner.api.dao.UserRepository;
-import app.dinnerwinner.api.entitles.Recipe;
-import org.springframework.beans.factory.annotation.Autowired;
+import app.dinnerwinner.api.recipe.entitles.Recipe;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

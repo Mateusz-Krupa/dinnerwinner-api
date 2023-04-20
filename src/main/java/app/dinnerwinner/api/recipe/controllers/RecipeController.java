@@ -1,6 +1,6 @@
 package app.dinnerwinner.api.recipe.controllers;
 
-import app.dinnerwinner.api.recipe.entitles.Recipe;
+import app.dinnerwinner.api.recipe.entities.Recipe;
 import app.dinnerwinner.api.recipe.services.RecipeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

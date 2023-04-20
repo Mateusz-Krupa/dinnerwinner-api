@@ -1,11 +1,16 @@
-package app.dinnerwinner.api.recipe.entitles;
+package app.dinnerwinner.api.recipe.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "recipes")
 public class Recipe implements Serializable {
@@ -17,10 +22,9 @@ public class Recipe implements Serializable {
 
     private String description;
 
+    @Builder.Default
     @OneToMany(mappedBy = "recipe", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Ingredient> ingredients = new ArrayList<>();
-    public Recipe() {
-    }
 
     public Recipe(String name, String description, List<Ingredient> ingredients) {
         this.name = name;
@@ -28,35 +32,11 @@ public class Recipe implements Serializable {
         this.ingredients = ingredients;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public List<Ingredient> getIngredients() {
+        return ingredients;
     }
 
     public void setIngredients(List<Ingredient> ingredients) {
         this.ingredients = ingredients;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public List<Ingredient> getIngredients() {
-        return ingredients;
     }
 }

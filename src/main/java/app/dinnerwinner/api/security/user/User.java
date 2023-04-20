@@ -1,8 +1,10 @@
 package app.dinnerwinner.api.security.user;
 
+import app.dinnerwinner.api.recipe.entities.Ingredient;
 import app.dinnerwinner.api.security.token.Token;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -34,11 +36,14 @@ public class User implements UserDetails {
   @OneToMany(mappedBy = "user")
   private List<Token> tokens;
 
+  @Builder.Default
+  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+  private List<Ingredient> ingredients = new ArrayList<>();
+
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {
     return List.of(new SimpleGrantedAuthority(role.name()));
   }
-
   @Override
   public String getPassword() {
     return password;

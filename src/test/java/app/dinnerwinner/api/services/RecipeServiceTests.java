@@ -1,9 +1,9 @@
 package app.dinnerwinner.api.services;
 
 import app.dinnerwinner.api.recipe.dao.RecipeRepository;
-import app.dinnerwinner.api.recipe.entitles.Ingredient;
-import app.dinnerwinner.api.recipe.entitles.Recipe;
+import app.dinnerwinner.api.recipe.entities.Ingredient;
 
+import app.dinnerwinner.api.recipe.entities.Recipe;
 import app.dinnerwinner.api.recipe.services.RecipeService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -39,6 +39,7 @@ public class RecipeServiceTests {
 
         List<Ingredient> ingredients = new ArrayList<>();
         Ingredient ingredient1 = new Ingredient();
+        ingredient1.setUserId(1);
         ingredient1.setName("Spaghetti");
         ingredient1.setUnit("g");
         ingredient1.setWeight(200f);
@@ -47,6 +48,7 @@ public class RecipeServiceTests {
         Ingredient ingredient2 = new Ingredient();
         ingredient2.setName("Beef");
         ingredient2.setUnit("g");
+        ingredient1.setUserId(2);
         ingredient2.setWeight(300f);
         ingredients.add(ingredient2);
 

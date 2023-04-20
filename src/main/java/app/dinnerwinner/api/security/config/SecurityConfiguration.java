@@ -33,8 +33,11 @@ public class SecurityConfiguration {
           .permitAll()
         .requestMatchers("/api/v1/auth/**")
           .permitAll()
+
         .anyRequest()
-          .authenticated()
+          .permitAll()
+//TODO permitALL should be removed
+//          .authenticated()
           .and()
           .sessionManagement()
           .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
